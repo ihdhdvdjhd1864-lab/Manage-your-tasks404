@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  transition: 0.5s;
+  background: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body::after {
+  z-index: -1;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+a {
+  text-decoration: none;
+}
+.div1100 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 20%;
+}
+li {
+  list-style: none;
+  border-right: 3px solid rgb(0, 136, 255);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.155);
+  padding: 10px;
+  border-radius: 8px;
+  word-break: break-all;
+}
+.box-inbut {
+  display: flex;
+  padding: 20px;
+}
+.box-inbut input {
+  width: 100%;
+  height: 50px;
+  padding: 4px;
+  border: 0;
+  outline: 0;
+  border: rgb(230, 230, 230) 2px solid;
+  border-radius: 8px;
+  transition: 0.5s;
+  font-size: 20px;
+  font-weight: 700;
+}
+.box-inbut input:focus {
+  border: rgb(0, 136, 255) 2px solid;
+}
+.barnbutn {
+  width: 100%;
+  padding: 20px;
+}
+
+.Task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3a7fed, #33bcea);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 15px 35px rgba(58, 192, 237, 0.5);
+  white-space: nowrap;
+}
+.Task:hover,
+.dilid:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(58, 192, 237, 0.5);
+}
+.Task:active {
+  transform: scale(0.96);
+}
+.Task i {
+  font-size: 18px;
+}
+.box-inbut .dilid {
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3a7fed, #33bcea);
+  font-weight: 700;
+  transition: 0.5s;
+  margin-left: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  white-space: nowrap;
+  display: none;
+}
+.box-inbut .dilid:hover,
+.box-inbut .dilid:focus {
+  background-color: rgb(0, 136, 255, 0.8);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.span11 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.DiliD {
+  background-color: rgba(245, 201, 201, 0.915);
+  font-size: 16px;
+  font-weight: 700;
+  width: 70px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  color: rgb(255, 0, 0);
+  width: 100%;
+
+  transition: 0.5s;
+}
+.DiliD:hover {
+  background-color: rgba(255, 0, 0, 0.755);
+  color: white;
+}
+.mktamll {
+  background-color: rgb(217, 248, 210);
+  font-size: 16px;
+  font-weight: 700;
+  width: 70px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  color: rgb(17, 203, 0);
+  transition: 0.5s;
+  width: 100%;
+}
+.mktamll:hover {
+  background-color: rgb(17, 203, 0);
+  color: white;
+}
+.tadal {
+  background-color: rgb(209, 230, 249);
+  font-size: 16px;
+  font-weight: 700;
+  width: 70px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  color: rgb(2, 137, 255);
+  transition: 0.5s;
+  width: 100%;
+}
+.tadal:hover {
+  background-color: rgba(0, 136, 255, 0.814);
+  color: white;
+}
+.connt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  width: 200px;
+  background-color: rgba(0, 136, 255, 0.388);
+  padding: 10px;
+  margin-top: 20px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0, 136, 255);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+}
+.up:hover {
+  background-color: rgb(0, 136, 255, 0.8);
+}

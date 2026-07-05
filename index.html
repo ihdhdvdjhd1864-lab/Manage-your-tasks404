@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage your tasks</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/96/task.png"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box-inbut">
+      <input type="text" placeholder="اكتب مهام" />
+      <button class="dilid">
+        <i class="fa-solid fa-trash-can"></i> Delete All
+      </button>
+    </div>
+    <div class="barnbutn">
+      <button class="Task"><i class="fa-solid fa-plus"></i> Add Task</button>
+      <div class="connt">
+        <h3>عدد المهام <span id="count">0</span></h3>
+      </div>
+    </div>
+
+    <ul></ul>
+    <button class="up"><i class="fa-solid fa-chevron-up"></i></button>
+    <script src="script.js"></script>
+  </body>
+</html>
