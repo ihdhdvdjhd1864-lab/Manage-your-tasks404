@@ -23,6 +23,8 @@ Task.addEventListener("click", function () {
   input.value = "";
   shawdade();
   updateCount();
+  All();
+  lafture();
 });
 function shawdade() {
   ul.innerHTML = "";
@@ -46,7 +48,6 @@ function shawdade() {
     li.appendChild(div);
     span.textContent = dadaTscks[i].titel;
     if (dadaTscks[i].completed === true) {
-      // لو لقينها true (يعني خلصت)، حط خط رمادي وصغر الخط
       span.style.cssText = `
     text-decoration: line-through;
     font-size: 14px;
@@ -65,6 +66,7 @@ function shawdade() {
         localStorage.setItem("Tascksll", JSON.stringify(dadaTscks));
         shawdade();
         updateCount();
+        lafture();
       }
     });
 
@@ -73,14 +75,11 @@ function shawdade() {
       if (newTask !== null && newTask.trim() !== "") {
         dadaTscks[i].titel = newTask;
         span.textContent = newTask;
-        span.style.cssText = `
-font-size: 20px;
-transition: 1s;
-color: rgb(0, 0, 0);
-  `;
       }
+
       localStorage.setItem("Tascksll", JSON.stringify(dadaTscks));
       shawdade();
+      lafture();
     });
 
     mktamll.addEventListener("click", function () {
@@ -97,16 +96,16 @@ color: rgb(0, 0, 0);
         span.style.cssText = `
       text-decoration: none;
       font-size: 20px;
-      color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       transition: 0.5s ease;
     `;
       }
 
-      setTimeout(function () {
-        shawdade();
-      }, 500);
+      shawdade();
+      lafture();
     });
   }
+  lafture();
 }
 input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
@@ -134,6 +133,7 @@ dilidAll.addEventListener("click", function () {
     input.value = "";
     All();
     updateCount();
+    lafture();
   }
 });
 
@@ -150,7 +150,8 @@ up.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
-setInterval(function () {
+
+window.addEventListener("scroll", function () {
   if (window.scrollY > 200) {
     up.style.cssText = `
     display: flex;
@@ -162,4 +163,14 @@ setInterval(function () {
     transition: 0.5s ease;
   `;
   }
-}, 100);
+});
+
+function lafture() {
+  let la123 = document.querySelector("#la123");
+  let rema = document.querySelector("#rema");
+  let completedCount = dadaTscks.filter((task) => task.completed).length;
+  la123.textContent = completedCount;
+  rema.textContent = dadaTscks.length - completedCount;
+}
+
+lafture();
